@@ -17,7 +17,7 @@ public class Event {
     private LocalDateTime myStart;
 
     /**
-     * The durarion of the event
+     * The duration of the event
      */
     private Duration myDuration;
 
