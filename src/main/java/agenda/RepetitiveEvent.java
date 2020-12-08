@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-package agenda;
 
-import java.util.*;
-import java.time.*;
-import java.time.temporal.ChronoUnit;
-
-=======
 package agenda;
 
 import java.util.*;
@@ -55,4 +48,4 @@ public class RepetitiveEvent extends Event {
     }
 
 }
->>>>>>> 9c62428b55e923266bafeaee453ace32b4387b96
+

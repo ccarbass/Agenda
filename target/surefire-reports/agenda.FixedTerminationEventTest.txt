@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: agenda.FixedTerminationEventTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in agenda.FixedTerminationEventTest
+eventIsNotInExceptionDays  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: Pas encore implémenté
+	at agenda.FixedTerminationEventTest.<init>(FixedTerminationEventTest.java:26)
+
+eventOccurs10WeeksAfter  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: Pas encore implémenté
+	at agenda.FixedTerminationEventTest.<init>(FixedTerminationEventTest.java:26)
+
+canCalculateTerminationDateFromNumberOfOccurrences  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: Pas encore implémenté
+	at agenda.FixedTerminationEventTest.<init>(FixedTerminationEventTest.java:26)
+
+canCalculateNumberOfOccurrencesFromTerminationDate  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: Pas encore implémenté
+	at agenda.FixedTerminationEventTest.<init>(FixedTerminationEventTest.java:26)
+
+eventIsNotInDayBefore  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: Pas encore implémenté
+	at agenda.FixedTerminationEventTest.<init>(FixedTerminationEventTest.java:26)
+
+eventIsInItsStartDay  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: Pas encore implémenté
+	at agenda.FixedTerminationEventTest.<init>(FixedTerminationEventTest.java:26)
+
