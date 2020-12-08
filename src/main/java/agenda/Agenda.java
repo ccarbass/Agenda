@@ -34,6 +34,7 @@ public class Agenda {
      * @return list and iteraror to the events that occur on that day
      */
     public List<Event> eventsInDay(LocalDate day) {
+
         ArrayList<Event> today = new ArrayList();
         for (Event e : events) {
 
