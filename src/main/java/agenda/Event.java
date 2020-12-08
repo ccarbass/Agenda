@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package agenda;
 
 import java.time.*;
@@ -70,9 +69,4 @@ public class Event {
    
     
 }
-=======
-package agenda;
 
-import java.time.*;
-
->>>>>>> 9c62428b55e923266bafeaee453ace32b4387b96

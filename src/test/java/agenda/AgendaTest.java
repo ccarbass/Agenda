@@ -9,7 +9,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 
-public class AgendaTest {
+public class
+AgendaTest {
     Agenda agenda;
     
     // November 1st, 2020
