@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -7,6 +8,7 @@
     <groupId>EvenoCarbasse</groupId>
     <artifactId>Agenda</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <name>Agenda - Enoncé</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
@@ -61,7 +63,9 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+
+            </plugin>		
+
         </plugins>
     </build>
     <reporting>
@@ -70,7 +74,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>2.9</version>
-            </plugin>
+
+            </plugin>            		
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -78,7 +84,8 @@
                 <configuration>
                     <show>public</show>
                     <nohelp>true</nohelp>
-                </configuration>
+
+                </configuration>				
             </plugin>
         </plugins>
     </reporting>
@@ -96,6 +103,7 @@
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
+
 
     </dependencies>
 
