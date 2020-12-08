@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package agenda;
 
 import java.time.Duration;
@@ -6,12 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
-=======
-package agenda;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -77,4 +72,4 @@ public class FixedTerminationEvent extends RepetitiveEvent {
     }
         
 }
->>>>>>> 9c62428b55e923266bafeaee453ace32b4387b96
+

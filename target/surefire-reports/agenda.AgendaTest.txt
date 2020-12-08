@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: agenda.AgendaTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.026 s <<< FAILURE! - in agenda.AgendaTest
+testMultipleEventsInDay  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.UnsupportedOperationException: Pas encore implémenté
+	at agenda.AgendaTest.<init>(AgendaTest.java:33)
+

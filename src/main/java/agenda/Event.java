@@ -1,6 +1,8 @@
 package agenda;
 
 import java.time.*;
+import java.time.chrono.ChronoLocalDate;
+import java.time.chrono.ChronoLocalDateTime;
 
 public class Event {
 
@@ -8,14 +10,14 @@ public class Event {
      * The myTitle of this event
      */
     private String myTitle;
-    
+
     /**
      * The starting time of the event
      */
     private LocalDateTime myStart;
 
     /**
-     * The durarion of the event 
+     * The durarion of the event
      */
     private Duration myDuration;
 
@@ -23,8 +25,8 @@ public class Event {
     /**
      * Constructs an event
      *
-     * @param title the title of this event
-     * @param start the start time of this event
+     * @param title    the title of this event
+     * @param start    the start time of this event
      * @param duration the duration of this event
      */
     public Event(String title, LocalDateTime start, Duration duration) {
@@ -40,10 +42,15 @@ public class Event {
      * @return true if the event occurs on that day, false otherwise
      */
     public boolean isInDay(LocalDate aDay) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+
+        if (aDay.isEqual(ChronoLocalDate.from(this.myStart)) || aDay.isEqual(ChronoLocalDate.from(this.myStart.plus(this.myDuration))) || aDay.isAfter(ChronoLocalDate.from(this.myStart)) && aDay.isBefore(ChronoLocalDate.from(this.myStart.plus(myDuration)))) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
-   
+
     /**
      * @return the myTitle
      */
@@ -66,7 +73,9 @@ public class Event {
         return myDuration;
     }
 
-   
-    
+    @Override
+    public String toString() {
+        return "Titre : " + this.myTitle + " Commence à " + this.myStart + " dure " + this.myDuration + " et se finit à " + this.myStart.plus(myDuration);
+    }
 }
 
