@@ -42,7 +42,7 @@ public class RepetitiveEvent extends Event {
      * @param date the event will not occur at this date
      */
     public void addException(LocalDate date) {
-       this.exceptions.add(date);
+        this.exceptions.add(date);
     }
 
     /**
@@ -52,5 +52,32 @@ public class RepetitiveEvent extends Event {
         return this.frequency;
     }
 
+    @Override
+    public boolean isInDay(LocalDate aDay) {
+        if (exceptions.contains(aDay)) {
+            return false;
+        }
+        switch (this.frequency) {
+            case DAYS:
+                return this.getStart().toLocalDate().equals(aDay) || this.getStart().toLocalDate().isBefore(aDay) ;
+            case WEEKS:
+                for (int i = 0; i < 53; i++) {
+                    if (this.getStart().toLocalDate().plus(i, ChronoUnit.WEEKS).equals(aDay)) {
+                        return true;
+                    }
+                }
+                return false;
+
+            case MONTHS:
+                for (int i = 0; i < 12; i++) {
+                    if (this.getStart().toLocalDate().plus(i, ChronoUnit.MONTHS).equals(aDay)) {
+                        return true;
+                    }
+                }
+                return false;
+        }
+
+        return this.getStart().toLocalDate().equals(aDay);
+    }
 }
 
