@@ -68,7 +68,23 @@ public class Agenda {
      * @return vrai s’il y a de la place dans l'agenda pour cet événement
      */
     public boolean isFreeFor(Event e) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        for(Event evenement : events){
+            if((evenement.getStart().isEqual(e.getStart())
+                    ||
+                    evenement.getStart().isAfter(e.getStart()) && evenement.getStart().isBefore(e.getStart().plus(e.getDuration())))
+                    ||
+                    (evenement.getStart().plus(evenement.getDuration()).isAfter(e.getStart())&&evenement.getStart().plus(evenement.getDuration()).isBefore(e.getStart().plus(e.getDuration())))
+                    ||
+                    evenement.getStart().isEqual(e.getStart())
+                    ||
+                    evenement.getStart().plus(evenement.getDuration()).isEqual(e.getStart().plus(e.getDuration()))){
+                return false;
+            }
+        }
+
+
+        return true;
     }
+
+
 }

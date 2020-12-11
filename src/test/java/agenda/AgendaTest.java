@@ -22,12 +22,17 @@ AgendaTest {
     // November 1st, 2020, 22:30
     LocalDateTime nov_1__2020_22_30 = LocalDateTime.of(2020, 11, 1, 22, 30);
 
+    LocalDateTime nov_11__2020_22_30 = LocalDateTime.of(2020, 11, 11, 22, 30);
+
+
     // 120 minutes
     Duration min_120 = Duration.ofMinutes(120);
 
     // A simple event
     // November 1st, 2020, 22:30, 120 minutes
     Event simple = new Event("Simple event", nov_1__2020_22_30, min_120);
+
+    Event simple2 = new Event("Simple event 2", nov_1__2020_22_30, min_120);
 
     // A Weekly Repetitive event ending at a given date
     RepetitiveEvent fixedTermination = new FixedTerminationEvent("Fixed termination weekly", nov_1__2020_22_30, min_120, ChronoUnit.WEEKS, jan_5_2021);
@@ -57,6 +62,20 @@ AgendaTest {
     @Test
     public void testTitre(){
         assertTrue(agenda.findByTitle("Simple event").contains(simple));
+        assertFalse(agenda.findByTitle("Simple event").contains(simple2));
     }
+    @Test
+    public void testTrouverEvent() {
+        assertEquals(1, agenda.findByTitle("Simple event").size());
+    }
+
+    @Test
+    public void testisFreeFor() {
+        Event simple_event2 = new Event("Simple event2", nov_11__2020_22_30, min_120);
+        assertFalse(agenda.isFreeFor(simple));
+        assertTrue(agenda.isFreeFor(simple_event2));
+
+    }
+
 
 }
