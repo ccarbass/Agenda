@@ -54,5 +54,9 @@ AgendaTest {
         assertTrue(agenda.eventsInDay(nov_1_2020).contains(neverEnding));
     }
 
+    @Test
+    public void testTitre(){
+        assertTrue(agenda.findByTitle("Simple event").contains(simple));
+    }
 
 }
